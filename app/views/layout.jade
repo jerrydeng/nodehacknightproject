@@ -1,0 +1,56 @@
+!!!
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/lin-style.css')
+    link(rel='stylesheet', href='/stylesheets/jquery-ui-1.8.17.custom.css')
+    script(type='text/javascript', src="/javascripts/jquery-1.7.1.min.js")
+    script(type='text/javascript', src="/javascripts/jquery-ui-1.8.17.custom.min.js")
+    script
+      function doSearch() {
+        $("#helpmenu a").removeClass('selected');
+        $.ajax({
+          type: "GET",
+          url: "/people/search?keywords=" + $('#keywords').val(),
+          success: function(data) {
+            $('#contents').html(data);
+          },
+          error: function() {
+            location.href = '/login';
+          }
+        });
+        return false;
+      };
+    title= 'LinkedIn-Node Demo'
+  body
+    #header
+      - if (session.credentials)
+        #nav
+          ul.menu
+            li
+              a(href='/logout') logout
+          p.name Welcome #{session.user.firstName}!
+      .logo
+        a(href='/people') 
+          image(src="images/logo_linkedin_119x32.gif",alt="LinkedIn")
+        span.title LinkedIn-Node Demo
+    #main.page
+      #messages
+        - if (flash.error)
+          p.error= flash.error
+        - if (flash.info)
+          p.info= flash.info
+      - if (session.credentials)
+        .bar
+          form(id='search', action = '/people/search', method = 'GET')
+            input(type='text', name='keywords', id='keywords', size=50, placeholder='type keywords here')
+            input.btn(id='search-btn', type='submit', value = 'Search', onclick="return doSearch();")
+          ul.navbar(id='helpmenu')
+            li
+              - if ((typeof menu != 'undefined') && (menu === 'doc'))
+                a.selected(href='/docs') Docs
+              - else
+                a(href='/docs') Docs
+          div.clearboth
+      #contents!= body
+      #footer
+

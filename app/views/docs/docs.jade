@@ -1,0 +1,50 @@
+#documentation
+  h1 General Instructions
+  div.section
+    ol.instructions
+      li get linkedin developer keys
+      li download lin node_module and initialize with application keys.
+      li get user's credentials using chosen Lin method (see sessionController for examples).
+      li Find the API you are interested by looking within the node_modules/lin/lib/api folder.  Note the version folder, file name, and method name you'd like to call, and then "get" the api and then make the request in the following way:
+        pre
+          code
+            var Lin = require('lin');
+            var api = Lin.api('v1','peopleAPI','search', options);
+            Lin.makeRequest(credentials, {api:api}, function(err, data) {
+            ...
+            }
+
+    p For more detailed instructions, please refer to 
+      a.selected(href='/readme.text') README
+
+  h1 How to extend Lin
+  div.section
+    p To extend the API, simply add a new version folder (if needed), new api file (if needed), and export chosen api method.  This method should translate user options into a request description to the LinkedIn Development Platform Layer.  Then discover your new api via the Lin.api call:   
+
+    pre
+      code
+        var api = Lin.api('newVersion','newAPI','myNewApiMethod', options);
+
+  h1 API Documentation
+  div.section
+    p I used a variant of docco to generate the following documentation.  The comments and api definitions are in the left column;  the corresponding code is on the right.
+      ul.links
+        li
+          a.selected(href='/peopleAPI.html') peopleAPI
+        li
+          a.selected(href='/updatesAPI.html') updatesAPI
+        li
+          a.selected(href='/mailboxAPI.html') mailboxAPI
+        li
+          a.selected(href='/groupsAPI.html') groupsAPI
+        li
+          a.selected(href='/newsAPI.html') newsAPI
+        li
+          a.selected(href='/industriesAPI.html') industriesAPI
+
+  h1 Related LinkedIn Developer Documentation
+  div.section
+    p  You might find these links helpful
+      ul.links
+        li
+          a.selected(href='https://developer.linkedin.com/documents/profile-fields') profile-fields

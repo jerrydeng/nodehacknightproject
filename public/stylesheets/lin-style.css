@@ -1,0 +1,348 @@
+/* LAYOUT ------------------------------------------------*/
+/*#4373BD*/
+
+/**
+
+dk blue: 0.2235, 0.3137, 0.3804;  22.35, 31.37, 38.04;  #395061
+med button blue: 0, 50.98, 65.88; #0082A8
+pale menu blue: 50.98, 65.88, 75.69; #82A8C1
+turquoise: 48.24, 89.41, 99.22; #7BE4FD
+pale green: 51.37, 69.80, 40; #83B266
+yellow-lt: 100.0, 98.04, 85.88; #FFFADB
+yellow-dk: 94.51, 88.24, 68.63; #F1E1AF
+med gray: 66.27, 67.45, 69.41; #A9ACB1
+lt gray background: 91.37, 91.37, 91.37; #E9E9E9
+dk gray: 40, 40, 40; #666666
+
+*/
+
+html * {
+    margin: 0;
+}
+
+body {
+    background: #E9E9E9;
+    font: 62.5%/1.2 Arial, Helvetica, "Nimbus Sans L", sans-serif;
+    /*font: 11px verdana, arial, helvetica, sans-serif;*/
+    margin: 15px;
+}
+
+#header {
+    background: #dcdcdc;
+    padding: 5px 5px 20px 5px;
+}
+
+#footer {
+  padding: 5px;
+  clear: both;
+}
+
+.page {
+    background: #dcdcdc;
+    padding: 5px;
+    border-bottom: 1px solid black;
+    min-height:800px;
+    height:100%;
+}
+
+.logout {
+  float:right;
+}
+
+.info { 
+  color:green; 
+  font-size:140%;
+  background-color: #e6f8dd; 
+}
+.error { 
+  color:red; 
+  font-size:140%;
+  background-color: #fee; 
+}
+
+.warn {
+  color:red;
+  font-size:140%;
+  padding: 5px;
+}
+
+
+.api {
+  padding: 10px;
+}
+
+
+h2 {
+  color:#000000;
+  background-color:transparent;
+  margin-top:0px;
+}
+
+.title {
+  font-size:170%;
+  color:#666666;
+  margin:0 0 50px 5px;
+}
+
+.bar {
+  /*background-color: #395061;*/
+  background-color: #82A8C1;
+  padding: 5px;
+  color: white;
+}
+
+.bar .title {
+ color: white;
+}
+
+
+div.login {
+  padding: 5px;
+  margin: 20px;
+  background-color:white;
+  border: 2px solid #D6D6D6;
+  border-top: 1px solid #B5B5B5;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-left-radius: 5px 5px;
+  border-bottom-right-radius: 5px 5px;
+}
+
+div.login .header {
+  font-size:150%;
+  color:#999999;
+}
+
+div.login .content {
+  padding: 10px 0 0 10px;
+}
+
+div.login p {
+  padding: 4px;
+}
+
+div.login label {
+  font-size:150%;
+  color:black;
+  padding-right: 4px;
+}
+
+#nav {
+  float:right;
+  margin: 5px 8px;
+  text-align: right;
+  font-size: 110%;
+  color: #666;
+  padding-right: 2px;
+}
+
+#nav p.name {
+  float:right;
+  padding-right:8px;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#nav ul {
+  float: right;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: none;
+  list-style-type: none;
+}
+
+#nav a {
+  text-decoration: none;
+}
+
+
+ul.navbar {
+  display: inline;
+  margin: 0;
+  padding: 5px 0 5px 0;
+  border: none;
+  list-style-type: none;
+}
+
+#navmenu {
+  float:left;
+}
+
+#helpmenu {
+  float:right;
+}
+
+
+.navbar li {
+  float:left;
+}
+
+.clearboth {
+  clear:both;
+}
+
+.navbar a {
+  outline: none;
+  padding: 0 5px 0 5px;
+  display: block;
+  text-decoration: none;
+  font-size: 140%;
+  color: #E9E9E9;
+}
+
+.navbar a.selected {
+  color: #A2FEFC;
+}
+
+#documentation {
+  font-size:150%;
+  font-family: sans-serif;
+}
+
+#documentation h1 {
+  font-size:130%;
+  padding:5px;
+}
+
+#documentation .section {
+  padding: 5px 5px 15px 5px;
+}
+
+li.selected {
+  color: #A2FEFC;
+  font-weight: bold;
+}
+
+p.instructions {
+  font-size: 150%;
+  color:#00FF00;
+}
+
+p.title {
+  font-weight: bold;
+}
+
+#search-results h2 {
+  margin: 15px 0 15px 0;
+  font-weight: bold;
+  font-size:170%;
+  color:#666666;
+}
+
+
+code {
+  margin:10px;
+  padding:5px 5px 0 5px;
+  background-color:white; 
+  font-weight: normal;
+  display: inline-block;
+  border: 1px solid #B5B5B5;
+}
+
+#search-btn {
+  margin-left:5px;
+}
+
+#search {
+  padding: 10px 5px 10px 5px;
+  float:left;
+}
+
+#profile-target {
+  clear:both;
+  float:left;
+  padding: 10px;
+}
+
+.tooltip {
+  font-size:170%;
+  color:#395061;
+  background: transparent;
+  padding: 5px;
+  display: block;
+  position: absolute;
+}
+
+.tooltip .person {
+  background:white;
+  padding:5px;
+  border: 1px solid #ccc;
+  position:relative;
+  top:-30px;
+  left:60px;
+}
+
+div.person-result {
+  float:left;
+  border: 1px solid #ccc;
+  margin-top:10px;
+  margin-left:10px;
+  cursor:pointer;
+}
+
+input.btn { 
+  color:white; 
+  background-color:#0082A8; 
+  border: 1px solid; 
+  border-color: #395061; 
+  filter:progid:DXImageTransform.Microsoft.Gradient 
+  (GradientType=0,StartColorStr='#0082A8',EndColorStr='#82A8C1'); 
+}
+
+#hideProfile {
+  text-decoration: none
+}
+
+#hideProfile p {
+  margin: 15px 0 15px 0;
+  font-weight: bold;
+  font-size:170%;
+  color:#0082A8;
+}
+
+.vcard .img {
+  float:left;
+  padding: 0 10px 5px 0;
+}
+
+#profile-target h2 {
+  padding: 15px 0 5px 0;
+  color:#395061;
+}
+
+.profile {
+  font-size:150%;
+  color:#395061;
+}
+
+.profile p.name {
+  font-size:170%;
+  font-style:oblique;
+  color:#395061;
+}
+
+
+.profile p.summary {
+  padding-top:5px;
+}
+
+.profile ul {
+  list-style-type: none;
+}
+
+#load-more {
+  clear:both;
+}
+
+
+
+
+
+

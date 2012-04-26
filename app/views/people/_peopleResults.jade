@@ -1,0 +1,41 @@
+script
+  function showPreview(pid, divcontent) {
+    var tooltip = $("<div id='tooltip' class='tooltip'>"+divcontent+"</div>");
+    tooltip.appendTo($("#" + pid));
+  }
+  function hidePreview() {
+    $("#tooltip").fadeOut().remove();
+  }
+  function showProfile(linkedInId, authToken) {
+    var tokenParam = authToken ? "?authToken="+authToken : '';
+    $.ajax({
+      type: "GET",
+      url: "/people/"+linkedInId+tokenParam,
+      success: function(data) {
+        $('#search-results').hide();
+        $('#profile-target').html(data);
+        $( "#profile-target" ).show( "slide", {direction:'left'}, 400 );
+      },
+      error: function() {
+        location.href = '/login';
+      }
+    });
+    return false;
+  };
+  function hideProfile() {
+    $('#profile-target').hide();
+    $( "#search-results" ).show( "slide", {direction:'right'}, 400 );
+    return false;
+  };
+  
+#search-results
+  if people && people.values && people.values.length > 0
+    if people && (typeof people.keywords != 'undefined')
+      h2= "Search results for: '" + people.keywords + "'"
+    - each p in people.values
+      !=partial('people/_searchResult', { locals: { person: p } })
+  else if people && (typeof people.keywords != 'undefined')
+    h2= "No results found for: '" + people.keywords + "'"
+
+  #load-more
+#profile-target

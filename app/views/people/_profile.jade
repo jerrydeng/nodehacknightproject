@@ -1,0 +1,25 @@
+a(id='hideProfile', href='#', onClick="hideProfile()")
+  p &#171; Back to search results
+  
+div.profile
+  div.vcard
+    image.img(src=person.pictureUrl,alt=person.formattedName)
+    p.name= person.formattedName
+    p.headline= person.headline
+    p.summary= person.summary
+    
+  - if (person.positions && person.positions.values)
+    h2 Positions
+    ul.positions
+      - each position in person.positions.values
+        - if (position.company && position.company.name)
+        li.position
+          p=(position.title ? position.title + " at " : "") + position.company.name
+          
+  - if (person.educations && person.educations.values)
+    h2 Educations
+    ul.educations
+      - each education in person.educations.values
+        li.education
+          p=(education.degree ? education.degree + " of " : "") + (education.fieldOfStudy ? education.fieldOfStudy + " at " : "") + (education.schoolName ? education.schoolName : "")
+   

@@ -1,0 +1,20 @@
+{
+  "name": "lin-demo",
+  "description": "Simple Node.JS project that demonstrates linkedin-node library",
+  "author": "\"Barbara Raitz\" <\"braitz@gmail.com\"> (\"http://www.linkedin.com/in/braitz\")",
+  "version": "1.0.0",
+  "dependencies": {
+    "linkedin-node":">= 1.0.0",
+    "express": ">= 2.5.6",
+    "jade": ">= 0.20.0",
+    "step": ">= 0.0.5",
+    "nlogger": ">= 0.3.0"
+  },
+  "engines": {
+    "node": ">= 0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "\"https://github.com/braitz/lin-demo\".git"
+  }
+}

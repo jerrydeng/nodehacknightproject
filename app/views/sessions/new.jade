@@ -1,0 +1,10 @@
+.api#public
+  .bar
+    span.title 
+  .login#requestLogin
+    .header Login using oauth redirect
+    .content
+      form(action = 'http://localhost:3000/login', method = 'POST')
+        input(type='hidden', name='type', id='type', value='request')
+        p
+          input.btn(type='submit', value = 'Request Login')

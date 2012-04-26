@@ -1,0 +1,5 @@
+div(id='person-'+person['id'], class='person-result')
+  .img
+    a(href='#', onClick="showProfile('"+person['id']+"','"+person['authToken']+"')", onMouseOver="showPreview('person-"+person['id']+"','"+partial('people/tooltip', { locals: { person: person } }) + "');return true;", onMouseOut="hidePreview();return true;")
+      image(src=person['pictureUrl'],alt=person['formattedName'], width="80", height="80")
+

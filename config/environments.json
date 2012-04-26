@@ -1,0 +1,12 @@
+{
+  "development": {
+    "lini": {
+      "env":"production",
+      "oauth": {
+        "apiKey": "queerp1fq4wa",
+        "apiSecret": "S4ZvSSlS9j7HeTMl",
+        "requestTokenCallback": "http://localhost:3000/accessToken"
+      }
+    }
+  }
+}
